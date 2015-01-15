@@ -4,6 +4,9 @@ using System.Collections;
 public class AppleTree : MonoBehaviour {
 	//Prefab for inst apples
 	public GameObject applePrefab;
+	public GameObject gapplePrefab;
+	public GameObject papplePrefab;
+	public GameObject bapplePrefab;
 
 	//speed at which tree moves
 	public float speed = 1f;
@@ -14,6 +17,11 @@ public class AppleTree : MonoBehaviour {
 	// chance tree will change direction
 	public float chanceToChangeDir = 0.02f;
 
+	//special apple chances
+	public float goodAppChan = 0.8f;
+	public float gappleChance = 0.01f;
+	public float pappleChance = 0.1f;
+
 	//rate at which apples will be instanciated
 	public float secBtwnAppleDrops = 1f;
 
@@ -23,8 +31,26 @@ public class AppleTree : MonoBehaviour {
 	}
 
 	void DropApple(){
-		GameObject apple = Instantiate(applePrefab) as GameObject;
-		apple.transform.position = transform.position;
+		float chano = Random.value;
+		float chan = Random.value;
+
+		if (chano < goodAppChan) {
+						if (chan < gappleChance) {
+								GameObject gapple = Instantiate (gapplePrefab) as GameObject;
+								gapple.transform.position = transform.position;
+						} else {
+								GameObject apple = Instantiate (applePrefab) as GameObject;
+								apple.transform.position = transform.position;
+						}
+				} else if (chan < pappleChance) {
+						GameObject papple = Instantiate (papplePrefab) as GameObject;
+						papple.transform.position = transform.position;
+				} else {
+			GameObject bapple = Instantiate (bapplePrefab) as GameObject;
+			bapple.transform.position = transform.position;
+
+				}
+
 		}
 	
 	// Update is called once per frame
