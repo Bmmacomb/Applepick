@@ -38,6 +38,9 @@ public class Basket : MonoBehaviour {
 			int score = int.Parse(scoreGT.text);
 			score += 100;
 			scoreGT.text = score.ToString();
+			if (score > HighScore.score) {
+				HighScore.score = score;
+			}
 				}
 
 		if (collidedWith.tag == "gapple") {
@@ -45,7 +48,12 @@ public class Basket : MonoBehaviour {
 			int score = int.Parse(scoreGT.text);
 			score += 1000;
 			scoreGT.text = score.ToString();
+			if (score > HighScore.score) {
+				HighScore.score = score;
+			}
 		}
+
+
 		if (collidedWith.tag == "bapple") {
 			Destroy (collidedWith);
 			int score = int.Parse(scoreGT.text);
@@ -54,7 +62,15 @@ public class Basket : MonoBehaviour {
 				score = 0;}
 
 			scoreGT.text = score.ToString();
+
+
+			if (score > HighScore.score) {
+				HighScore.score = score;
+			}
 		}
+
+
+
 		if (collidedWith.tag == "papple") {
 			Destroy (collidedWith);
 			int score = int.Parse(scoreGT.text);
@@ -62,6 +78,12 @@ public class Basket : MonoBehaviour {
 			if (score < 0){
 				score = 0;}
 			scoreGT.text = score.ToString();
+
+			if (score > HighScore.score) {
+				HighScore.score = score;
+			}
 		}
+
+
 	}
 }

@@ -12,7 +12,11 @@ public class Apple : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (transform.position.y < BottomY) {
-			Destroy ( this.gameObject);		
+			Destroy ( this.gameObject);	
+			// get ref to ApplePicker component of main camera
+			ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
+			// call appledestroyed
+			apScript.AppleDestroyed();
 		}
 	
 	}
