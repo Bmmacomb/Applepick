@@ -4,9 +4,9 @@ using System.Collections;
 public class AppleTree : MonoBehaviour {
 	//Prefab for inst apples
 	public GameObject applePrefab;
-	public GameObject gapplePrefab;
-	public GameObject papplePrefab;
-	public GameObject bapplePrefab;
+	public GameObject gapplePrefab; //gold apple
+	public GameObject papplePrefab; //poison apple (like gold apple but subtracts 1000 points)
+	public GameObject bapplePrefab; //bad apple
 
 	//speed at which tree moves
 	public float speed = 1f;

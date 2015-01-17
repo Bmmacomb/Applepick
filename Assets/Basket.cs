@@ -32,8 +32,9 @@ public class Basket : MonoBehaviour {
 	void OnCollisionEnter(Collision coll){
 				//find out what hit basket
 				GameObject collidedWith = coll.gameObject;
+
 				if (collidedWith.tag == "apple") {
-						Destroy (collidedWith);
+			Destroy (collidedWith);
 			int score = int.Parse(scoreGT.text);
 			score += 100;
 			scoreGT.text = score.ToString();
@@ -45,5 +46,22 @@ public class Basket : MonoBehaviour {
 			score += 1000;
 			scoreGT.text = score.ToString();
 		}
+		if (collidedWith.tag == "bapple") {
+			Destroy (collidedWith);
+			int score = int.Parse(scoreGT.text);
+			score = score - 100;
+			if (score < 0){
+				score = 0;}
+
+			scoreGT.text = score.ToString();
 		}
+		if (collidedWith.tag == "papple") {
+			Destroy (collidedWith);
+			int score = int.Parse(scoreGT.text);
+			score = score - 1000;
+			if (score < 0){
+				score = 0;}
+			scoreGT.text = score.ToString();
+		}
+	}
 }
