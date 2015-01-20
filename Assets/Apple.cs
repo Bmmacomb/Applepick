@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+//Brendan Mulhern
+//last modified 1/20/15
+//Purpose: behavior for apple and gold apple (gapple) objects
 
 public class Apple : MonoBehaviour {
 	public static float BottomY = -20f;

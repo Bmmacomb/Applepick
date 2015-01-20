@@ -3,6 +3,9 @@ using System.Collections;
 
 public class Basket : MonoBehaviour {
 	public GUIText scoreGT;
+	//Brendan Mulhern
+	//last modified 1/20/15
+	//Purpose: behavior for the basket and some of the scoreing
 
 
 

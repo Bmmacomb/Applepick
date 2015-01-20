@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+//Brendan Mulhern
+//last modified 1/20/15
+//Purpose: behavior for the game itself
 
 public class ApplePicker : MonoBehaviour {
 	public GUIText scoreGT;

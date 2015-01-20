@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class HighScore : MonoBehaviour {
+	//Brendan Mulhern
+	//last modified 1/20/15
+	//Purpose: handles the high score feature
 	static public int score = 1000;
 
 	// Use this for initialization

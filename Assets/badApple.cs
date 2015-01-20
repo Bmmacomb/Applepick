@@ -2,6 +2,9 @@
 using System.Collections;
 
 public class badApple : MonoBehaviour {
+	//Brendan Mulhern
+	//last modified 1/20/15
+	//Purpose: behavior for bad apple and poison apple objects
 	public GUIText scoreGT;
 	public static float BottomY = -20f;
 	
