@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+//Brendan Mulhern
+//last modified 1/20/15
+//Purpose: behavior for the apple tree
 
 public class AppleTree : MonoBehaviour {
 	//Prefab for inst apples
@@ -31,9 +34,10 @@ public class AppleTree : MonoBehaviour {
 	}
 
 	void DropApple(){
+		//these are random values to use later
 		float chano = Random.value;
 		float chan = Random.value;
-
+		// handle the good apples
 		if (chano < goodAppChan) {
 						if (chan < gappleChance) {
 								GameObject gapple = Instantiate (gapplePrefab) as GameObject;
@@ -42,6 +46,7 @@ public class AppleTree : MonoBehaviour {
 								GameObject apple = Instantiate (applePrefab) as GameObject;
 								apple.transform.position = transform.position;
 						}
+			// else use a bad apple
 				} else if (chan < pappleChance) {
 						GameObject papple = Instantiate (papplePrefab) as GameObject;
 						papple.transform.position = transform.position;

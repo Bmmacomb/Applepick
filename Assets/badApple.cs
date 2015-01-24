@@ -5,6 +5,8 @@ public class badApple : MonoBehaviour {
 	//Brendan Mulhern
 	//last modified 1/20/15
 	//Purpose: behavior for bad apple and poison apple objects
+	/**this is almost exactly the same as the apple script except it gives 100 points when these objects fall off the screen
+	 **/
 	public GUIText scoreGT;
 	public static float BottomY = -20f;
 	
